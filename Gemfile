@@ -36,6 +36,9 @@ gem 'discard', '~> 1.0'
 # Flexible authentication solution for Rails with Warden. http://blog.plataformatec.com.br/tag/…
 gem 'devise'
 
+# RailsAdmin is a Rails engine that provides an easy-to-use interface for managing your data
+gem 'rails_admin', '~> 2.0'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.8'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

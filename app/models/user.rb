@@ -11,6 +11,8 @@ class User < ApplicationRecord
   has_many :collected_coins, dependent: :destroy
   has_many :killed_monsters, dependent: :destroy
   has_many :monsters, through: :killed_monsters
+  has_many :reward_users, dependent: :destroy
+  has_many :rewards, through: :reward_users
 
   # Methods
   def total_coins
