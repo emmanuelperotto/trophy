@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 2019_09_06_210839) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "death_counts", default: 0
+    t.integer "deaths_count", default: 0
     t.integer "collected_coins_count", default: 0
     t.integer "killed_monsters_count", default: 0
     t.index ["email"], name: "index_users_on_email", unique: true

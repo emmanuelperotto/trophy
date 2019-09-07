@@ -2,7 +2,7 @@
 
 class AddCounterCachesToUsers < ActiveRecord::Migration[6.0]
   def up
-    add_column :users, :death_counts, :integer, default: 0
+    add_column :users, :deaths_count, :integer, default: 0
     add_column :users, :collected_coins_count, :integer, default: 0
     add_column :users, :killed_monsters_count, :integer, default: 0
 
@@ -12,7 +12,7 @@ class AddCounterCachesToUsers < ActiveRecord::Migration[6.0]
   end
 
   def down
-    remove_column :users, :death_counts, :integer
+    remove_column :users, :deaths_count, :integer
     remove_column :users, :collected_coins_count, :integer
     remove_column :users, :killed_monsters_count, :integer
   end
