@@ -13,7 +13,7 @@ RSpec.describe Death, type: :model do
     before { seed_rewards }
 
     [1, 10, 25, 50, 100].each_with_index do |number_of_deaths, index|
-      context "when user died #{number_of_deaths} times" do
+      context "when user's death count reaches #{number_of_deaths}" do
         let(:deaths_count) { number_of_deaths - 1 }
 
         it "expects to reward user with the #{number_of_deaths}x death reward" do
@@ -31,7 +31,7 @@ RSpec.describe Death, type: :model do
 
       next if index == 0
 
-      context "when user died #{number_of_deaths - 1} times" do
+      context "when user's death count reaches #{number_of_deaths - 1}" do
         let(:deaths_count) { number_of_deaths - 2 }
 
         it "expects NOT to reward user with the #{number_of_deaths}x death reward" do
