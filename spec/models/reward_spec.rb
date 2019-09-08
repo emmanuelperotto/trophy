@@ -9,9 +9,13 @@ RSpec.describe Reward, type: :model do
   end
 
   describe 'validations' do
-    it { is_expected.to validate_presence_of(:type) }
+    # Required
+    it { is_expected.to validate_presence_of(:kind) }
     it { is_expected.to validate_presence_of(:required_value) }
     it { is_expected.to validate_numericality_of(:required_value).is_greater_than_or_equal_to(0) }
-    it { is_expected.to validate_uniqueness_of(:required_value).scoped_to(:type).ignoring_case_sensitivity }
+    it { is_expected.to validate_uniqueness_of(:required_value).scoped_to(:kind).ignoring_case_sensitivity }
+
+    # Optional
+    it { is_expected.not_to validate_presence_of(:description) }
   end
 end
