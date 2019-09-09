@@ -1,0 +1,30 @@
+require: rubocop-rspec
+
+RSpec/NestedGroups:
+  Max: 4
+
+Rails:
+  Enabled: true
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*.rb"
+    - "config/**/*.rb"
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+  Exclude:
+    - "config/application.rb"
+
+AllCops:
+  TargetRubyVersion: 2.5.3
+  Exclude:
+    - "bin/*"
+    - "db/migrate/*.rb"
+    - "db/schema.rb"

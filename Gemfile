@@ -39,9 +39,14 @@ gem 'devise'
 # RailsAdmin is a Rails engine that provides an easy-to-use interface for managing your data
 gem 'rails_admin', '~> 2.0'
 
+# A simple, standardized way to build and use Service Objects (aka Commands) in Ruby http://nebulab.it
+gem 'simple_command'
+
 group :development, :test do
   gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 3.8'
+  gem 'rubocop'
+  gem 'rubocop-rspec'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end

@@ -18,4 +18,12 @@ class User < ApplicationRecord
   def total_coins
     collected_coins.sum(:value)
   end
+
+  def killed_bowsers_count
+    monsters.where(name: 'bowser').count
+  end
+
+  def killed_turtles_count
+    monsters.where(name: 'turtle').count
+  end
 end
