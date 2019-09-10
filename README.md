@@ -18,6 +18,6 @@
 # How to run (locally)
 
 - After cloning run ```bundle install```
-- Run ```rails db:create db:migrate```
+- Run ```rails db:create db:migrate db:seed```
 - Run ```rails s``` and then go to localhost:3000
 - If you don't have an account then you can click sign up
