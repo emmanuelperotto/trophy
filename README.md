@@ -1,24 +1,23 @@
-# README
+# Dependencies
+- Ruby 2.6.3
+- Rails 6.0
+- PostgreSQL
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Tools Used
+- Command Design Pattern to get all the reward giving logic centralized
+- [RSpec](https://rspec.info/) for tests
+- [Devise](https://github.com/plataformatec/devise) for authentication
+- [Rails Admin](https://github.com/sferik/rails_admin) for the dashboard
+- [Rubocop](https://github.com/rubocop-hq/rubocop) for static code analysis
+- [Heroku](https://www.heroku.com/) as Cloud to host the application
 
-Things you may want to cover:
+# How to run (heroku)
+- Access https://guarded-brook-06687.herokuapp.com (it can take a little time in the first loading because i'm using the free heroku plan)
+- If you don't have an account then you can click sign up
 
-* Ruby version
+# How to run (locally)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- After cloning run ```bundle install```
+- Run ```rails db:create db:migrate```
+- Run ```rails s``` and then go to localhost:3000
+- If you don't have an account then you can click sign up
