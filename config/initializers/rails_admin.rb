@@ -26,7 +26,7 @@ RailsAdmin.config do |config|
 
   config.actions do
     dashboard do
-      except ['KilledMonster', 'KilledMonsters']
+      except %w[KilledMonster KilledMonsters]
     end
     index
     new
