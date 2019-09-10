@@ -11,9 +11,19 @@ class User < ApplicationRecord
   has_many :collected_coins, dependent: :destroy
   has_many :killed_monsters, dependent: :destroy
   has_many :monsters, through: :killed_monsters
+  has_many :reward_users, dependent: :destroy
+  has_many :rewards, through: :reward_users
 
   # Methods
   def total_coins
     collected_coins.sum(:value)
+  end
+
+  def killed_bowsers_count
+    monsters.where(name: 'bowser').count
+  end
+
+  def killed_turtles_count
+    monsters.where(name: 'turtle').count
   end
 end

@@ -13,5 +13,7 @@ RSpec.describe User, type: :model do
     it { is_expected.to have_many(:collected_coins).dependent(:destroy) }
     it { is_expected.to have_many(:killed_monsters).dependent(:destroy) }
     it { is_expected.to have_many(:monsters).through(:killed_monsters) }
+    it { is_expected.to have_many(:reward_users).dependent(:destroy) }
+    it { is_expected.to have_many(:rewards).through(:reward_users) }
   end
 end
