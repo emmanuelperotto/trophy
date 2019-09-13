@@ -42,6 +42,8 @@ gem 'rails_admin', '~> 2.0'
 # A simple, standardized way to build and use Service Objects (aka Commands) in Ruby http://nebulab.it
 gem 'simple_command'
 
+gem 'erd'
+
 group :development, :test do
   gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 3.8'
